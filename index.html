@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpendWise Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SpendWise Dashboard</h1>
+    
+    <!-- Budget Setup Section -->
+    <section class="budget-section">
+      <label for="monthly-budget">Set Monthly Budget ($):</label>
+      <input type="number" id="monthly-budget" placeholder="Enter budget" value="1000">
+    </section>
+
+    <!-- Expense Entry Form (Requirement 5: Event Listeners) -->
+    <section class="form-section">
+      <h2>Add New Expense</h2>
+      <form id="expense-form">
+        <input type="text" id="expense-name" placeholder="Expense description (e.g., Groceries)" required>
+        <input type="number" id="expense-amount" placeholder="Amount ($)" required step="0.01">
+        <button type="submit" id="add-btn">Add Expense</button>
+      </form>
+    </section>
+
+    <!-- Status & Feedback Section (Requirement 1: Decision Making) -->
+    <section class="status-section">
+      <h2>Budget Overview</h2>
+      <p>Total Expenses: $<span id="total-expenses">0.00</span></p>
+      <p>Remaining Budget: $<span id="remaining-budget">1000.00</span></p>
+      <div id="feedback-message" class="alert-box"></div>
+    </section>
+
+    <!-- Expenses List Display (Requirement 3 & 4: Loops & DOM Updates) -->
+    <section class="list-section">
+      <h2>Recorded Expenses</h2>
+      <ul id="expense-list">
+        <!-- Dynamic list items will be injected here -->
+      </ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
